@@ -73,7 +73,11 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
   'morhetz/gruvbox',
-  'doums/darcula',
+  {'doums/darcula', 
+    config = function()
+      vim.cmd.colorscheme 'darcula'
+    end,
+  },
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -158,7 +162,7 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      --vim.cmd.colorscheme 'onedark'
     end,
   },
 
