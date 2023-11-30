@@ -75,7 +75,7 @@ require('lazy').setup({
   'morhetz/gruvbox',
   {'doums/darcula', 
     config = function()
-      vim.cmd.colorscheme 'darcula'
+      -- vim.cmd.colorscheme 'darcula'
     end,
   },
   -- Detect tabstop and shiftwidth automatically
@@ -162,7 +162,7 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      --vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'onedark'
     end,
   },
 
@@ -255,7 +255,6 @@ vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
-vim.o.termguicolors = true
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -283,7 +282,11 @@ vim.o.timeoutlen = 300
 vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
-vim.o.termguicolors = true
+--if vim.fn.has("termguicolors") then
+--  vim.o.termguicolors = true
+
+--end
+vim.o.syntax = "on"
 
 -- [[ Basic Keymaps ]]
 
