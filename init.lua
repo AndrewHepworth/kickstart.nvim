@@ -68,11 +68,12 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
-
+  {'rose-pine/neovim', name = 'rose-pine', disable_background = true},
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-
+  'morhetz/gruvbox',
+  'doums/darcula',
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -603,6 +604,5 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
