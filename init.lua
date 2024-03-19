@@ -3,7 +3,7 @@
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
-
+To restart or resource file: luafile %
 Kickstart.nvim is *not* a distribution.
 
 Kickstart.nvim is a template for your own configuration.
@@ -592,7 +592,7 @@ luasnip.config.setup {}
 luasnip.add_snippets( nil, {
     typescript = {
         snip({
-            trig = "tsTest",
+            trig = "jestTest",
             name = "Typescript Jest Snippet",
             desc = "Snippet for the ts module jest wrt test func"},
             {
