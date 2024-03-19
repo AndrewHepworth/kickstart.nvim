@@ -582,31 +582,8 @@ mason_lspconfig.setup_handlers {
 -- See `:help cmp`
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
-local text = luasnip.text_node
-local snip = luasnip.snippet
-local insert = luasnip.insert_node
-local indent = luasnip.indent_snippet_node
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
-
-luasnip.add_snippets( nil, {
-    typescript = {
-        snip({
-            trig = "jestTest",
-            name = "Typescript Jest Snippet",
-            desc = "Snippet for the ts module jest wrt test func"},
-            {
-                text ("test(`" ) ,
-                insert(1, "testName"),
-                text ({" `, async () => {", "" }),
-                indent ( 2, { insert( 3, "") }, " " ),
-                text({ "", "})" }),
-            }),
-
-    }
-
-})
-
 
 cmp.setup {
   snippet = {
@@ -653,3 +630,5 @@ cmp.setup {
 }
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+require ('snippets.ts-snippets')
